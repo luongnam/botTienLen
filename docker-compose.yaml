@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  tienlen-bot-service:
+    image: dangnguyendota/tienlen-bot-service:v2.0.0
+    container_name: dangnguyendota-tienlen-bot-service
+    build: .
+    volumes:
+      - ./configs:/bot/configs
+      - ./logs:/bot/logs
+    ports:
+      - "7534:7534"
+    environment:
+      TIENLEN_BOT_PORT: 7534
+    restart: always
+    network_mode: bridge
+    healthcheck:
+      test: [ "CMD", "curl", "-X", "GET", "http://localhost:7534/api/v2/ping" ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      start_period: 5s

@@ -1,0 +1,45 @@
+debug: false
+# mật khẩu
+key: abcXYZ123456789
+# thời gian nhiều nhất dành cho 1 request, tính bằng mili giây
+timeout: 15000
+# số lượng tối đa request được đưa vào hàng đợi
+max_queue_size: 512
+# số lượng tối đa request được xử lý cùng 1 lúc
+max_workers: 32
+default_interactions: 4500000000
+# thời gian tối thiểu suy nghĩ 1 nước
+default_min_thinking_time: 500
+# thời gian tối đa suy nghĩ 1 nước
+default_max_thinking_time: 1000
+# đường dẫn tới folder log
+log_path: ./logs
+# format tên của file log
+# mặc định là YYYY-MM-DD
+# Ví dụ:
+# 2006-01-02 : YYYY-MM-DD
+# 02-01-2006 : DD-MM-YYYY
+file_log_name_format: 2006-01-02
+
+# tự định nghĩa giá trị mỗi lá bài truyền lên server
+rank_rule:
+  two: 0
+  three: 1
+  four: 2
+  five: 3
+  six: 4
+  seven: 5
+  eight: 6
+  nine: 7
+  ten: 8
+  jack: 9
+  queen: 10
+  king: 11
+  ace: 12
+
+# tự định nghĩa giá trị của mỗi chất truyền lên server
+suit_rule:
+  spade: 0
+  club: 1
+  diamond: 2
+  heart: 3

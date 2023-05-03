@@ -1,0 +1,8 @@
+.idea
+.git
+logs
+tienlenbot
+scripts
+Makefile
+.gitignore
+README.md
